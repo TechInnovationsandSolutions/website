@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap");
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -11,6 +12,7 @@ body, main, footer, section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
 }
 
 body, main, footer, section, header {
@@ -19,10 +21,177 @@ body, main, footer, section, header {
 }
 
 body header {
-  padding: 15px 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 body main section {
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
+}
+
+body footer div.contact-container, body footer div.copyright-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 25px 15px 25px 15px;
+}
+
+body footer div.contact-container div.contact-container__content-details-container, body footer div.contact-container div.contact-container__form-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+body footer div.contact-container div.contact-container__content-details-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__content-container h4.contact-container__content-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__content-container p {
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.63);
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__details-container div.contact-container__info-container {
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 15px 0px 15px 0px;
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__details-container div.contact-container__info-container span.contact-info__icon {
+  width: 20%;
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__details-container div.contact-container__info-container span.contact-info__icon svg {
+  height: 40px;
+  width: 40px;
+  fill: #428348;
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__details-container div.contact-container__info-container span.contact-info__text {
+  font-size: 20px;
+  line-height: 24px;
+  color: #6A7C6C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+}
+
+body footer div.contact-container div.contact-container__content-details-container div.contact-container__details-container div.contact-container__info-container span.contact-info__text a {
+  color: #6A7C6C;
+  text-decoration: none;
+}
+
+body footer div.contact-container div.contact-container__form-container {
+  width: 95%;
+  max-width: 490px;
+  max-height: 500px;
+  background: #FFFFFF;
+  margin: auto auto auto auto;
+  padding: 15px 15px 15px 15px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+body footer div.contact-container div.contact-container__form-container * {
+  width: 100%;
+  max-width: 100%;
+}
+
+body footer div.contact-container div.contact-container__form-container p.contact-form__title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+
+body footer div.contact-container div.contact-container__form-container label.form-label {
+  padding: 5px 5px 5px 5px;
+}
+
+body footer div.contact-container div.contact-container__form-container label.form-label input, body footer div.contact-container div.contact-container__form-container label.form-label textarea {
+  background: #FFFFFF;
+  border: 1px solid #428348;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+}
+
+body footer div.contact-container div.contact-container__form-container label.form-label input::-webkit-input-placeholder, body footer div.contact-container div.contact-container__form-container label.form-label textarea::-webkit-input-placeholder {
+  line-height: 24px;
+  color: #B1B8B2;
+}
+
+body footer div.contact-container div.contact-container__form-container label.form-label input:-ms-input-placeholder, body footer div.contact-container div.contact-container__form-container label.form-label textarea:-ms-input-placeholder {
+  line-height: 24px;
+  color: #B1B8B2;
+}
+
+body footer div.contact-container div.contact-container__form-container label.form-label input::-ms-input-placeholder, body footer div.contact-container div.contact-container__form-container label.form-label textarea::-ms-input-placeholder {
+  line-height: 24px;
+  color: #B1B8B2;
+}
+
+body footer div.contact-container div.contact-container__form-container label.form-label input::placeholder, body footer div.contact-container div.contact-container__form-container label.form-label textarea::placeholder {
+  line-height: 24px;
+  color: #B1B8B2;
+}
+
+body footer div.contact-container div.contact-container__form-container button#frm-contact-form__submit {
+  background-color: #428348;
+  border: 1px solid #428348;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 5px 5px 5px 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+body footer div.copyright-container {
+  background-color: #000000;
+  color: #fff;
+}
+
+body footer div.copyright-container div.social-media-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
+
+body footer div.copyright-container div.social-media-container a.social-media {
+  font-size: 30px;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  margin: auto auto auto auto;
+}
+
+body footer div.copyright-container div.social-media-container a.social-media i {
+  padding: 0 0 0 0;
 }
 /*# sourceMappingURL=main.css.map */

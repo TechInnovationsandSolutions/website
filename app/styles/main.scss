@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+
+$themeGreen: #428348;
+
+@mixin padElem ($pT:0, $pR:$pT, $pB:$pT, $pL:$pR) {
+  padding: $pT $pR $pB $pL;
+}
+
+@mixin marginElem ($mT:0, $mR:$mT, $mB:$mT, $mL:$mR) {
+  margin: $mT $mR $mB $mL;
+}
+
 *{
-  padding: 0;
-  margin: 0;
+  @include padElem();
+  @include marginElem();
   box-sizing: border-box;
 }
 
 body, main, footer, section{
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
 }
 
 body, main, footer, section, header{
@@ -18,13 +31,170 @@ body{
   header{
     $hX: 15px;
     $hY: 15px;
-    padding: $hY $hX;
+    @include padElem($hY, $hX);
   }
 
   main{
     section{
-      padding: 15px;
+      @include padElem(15px);
     }
   }
-  
+
+  footer{
+    $pX: 15px;
+    $pY: 25px;
+
+    div.contact-container, div.copyright-container{
+      width: 100%;
+      max-width: 100%;
+      @include padElem($pY, $pX);
+    }
+
+    div.contact-container{
+      div.contact-container__content-details-container, div.contact-container__form-container{
+        width: 100%;
+        max-width: 100%;
+      }
+
+      div.contact-container__content-details-container{
+        width: 100%;
+        max-width: 100%;
+
+        div.contact-container__content-container{
+          h4.contact-container__content-title{
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 36px;
+          }
+
+          p{
+            width: 100%;
+            font-style: normal;
+            font-weight: normal;
+            // font-size: 25px;
+            line-height: 30px;
+            color: rgba(0, 0, 0, 0.63);
+            // text-align: justify;
+          }
+        }
+
+        div.contact-container__details-container{
+          div.contact-container__info-container{
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            @include marginElem(15px, 0px);
+
+            $wdIcon: 20%;
+            $wx: 100% - $wdIcon;
+
+            span.contact-info__icon{
+              width: $wdIcon;
+
+              svg{
+                height: 40px;
+                width: 40px;
+                fill: $themeGreen;
+              }
+            }
+
+            span.contact-info__text{
+              font-size: 20px;
+              line-height: 24px;
+              color: #6A7C6C;
+              display: flex;
+              flex-wrap: wrap;
+              width: $wx;
+              
+              a{
+                color: #6A7C6C;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      div.contact-container__form-container{
+        width: 95%;
+        max-width: 490px;
+        max-height: 500px;
+        background: #FFFFFF;
+        @include marginElem(auto);
+        @include padElem(15px);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+
+        *{
+          width: 100%;
+          max-width: 100%;
+        }
+
+        p.contact-form__title{
+          font-weight: normal;
+          font-size: 30px;
+          line-height: 36px;
+          text-align: center;
+        }
+
+        label.form-label{
+          @include padElem(5px);
+
+          input, textarea{
+            background: #FFFFFF;
+            border: 1px solid #428348;
+            box-sizing: border-box;
+            @include padElem(10px);
+
+            &::placeholder{
+              // font-weight: normal;
+              // font-size: 20px;
+              line-height: 24px;
+              color: #B1B8B2;
+            }
+          }
+        }
+
+        button#frm-contact-form__submit{
+          background-color: $themeGreen;
+          border: 1px solid $themeGreen;
+          box-sizing: border-box;
+          font-size: 20px;
+          line-height: 24px;
+          @include padElem(5px);
+          color: #fff;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    div.copyright-container{
+      background-color: #000000;
+      color: #fff;
+
+      div.social-media-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        @include marginElem(10px, auto);
+        text-align: center;
+
+        a.social-media{
+          font-size: 30px;
+          @include padElem(5px);
+          text-decoration: none;
+          text-align: center;
+          color: #fff;
+          @include marginElem(auto);
+
+          i{
+            @include padElem();
+          }
+        }
+      }
+    }
+  }
 }
