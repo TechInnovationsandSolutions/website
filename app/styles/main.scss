@@ -3,3 +3,28 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body, main, footer, section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body, main, footer, section, header{
+  width: 100%;
+  max-width: 100%;
+}
+
+body{
+  header{
+    $hX: 15px;
+    $hY: 15px;
+    padding: $hY $hX;
+  }
+
+  main{
+    section{
+      padding: 15px;
+    }
+  }
+  
+}
