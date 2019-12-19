@@ -22,6 +22,16 @@ $navColor: #6A7C6C;
   box-sizing: border-box;
 }
 
+.fadeSlide {
+  animation-name: fadeSlide;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeSlide {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 body, main, footer, section{
   @include flexAndWrap();
   font-family: 'Lato', sans-serif;
@@ -158,7 +168,7 @@ body{
       }
 
       &.who-we-are{
-        background: linear-gradient(95.53deg, #428348 63.75%, rgba(66, 131, 72, 0) 196.51%);
+        background: linear-gradient(95.53deg, $themeGreen 63.75%, rgba(66, 131, 72, 0) 196.51%);
         color: #fff;
 
         .who-we-are-title-cont, .who-we-are-contents-cont{
@@ -315,7 +325,7 @@ body{
           }
 
           button.btn-get-to-know__content{
-            background: linear-gradient(139.17deg, #428348 55.31%, rgba(66, 131, 72, 0) 173.34%);
+            background: linear-gradient(139.17deg, $themeGreen 55.31%, rgba(66, 131, 72, 0) 173.34%);
             border-radius: 13px;
             border: 0;
             padding: 10px 20px;
@@ -505,7 +515,7 @@ body{
 
       &.sub-major-services{
         text-align: center;
-        background: linear-gradient(183.62deg, #428348 3.79%, rgba(66, 131, 72, 0) 226.9%);
+        background: linear-gradient(183.62deg, $themeGreen 3.79%, rgba(66, 131, 72, 0) 226.9%);
         color: #fff;
 
         .sub-major-services__heading{
@@ -546,6 +556,152 @@ body{
 
         @media screen and (min-width: 768px) {
           padding: 30px;
+        }
+      }
+
+      &.how-we-do-it{
+        color: #fff;
+        background-color: $themeGreen;
+
+        h1{
+          font-style: normal;
+          font-weight: bold;
+          font-size: 40px;
+          line-height: 48px;
+          text-align: center;
+        }
+
+       .slider-container, .slider-contents{
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 15px;
+        }
+
+        .slider-container{ 
+          @include flexAndWrap();
+
+          div.slider{
+            width: 100%;
+            max-width: 100%;
+            @include flexAndWrap();
+
+            div.slide-item {
+              width: 250px;
+              max-width: 100%;
+              height: 250px;
+              display: none;
+              flex-wrap: wrap;
+              max-width: 729px;
+              max-height: 658px;
+              margin: auto;
+
+              img{
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+          }
+        }
+
+        .slider-contents{
+          text-align: center;
+
+          .slider-title, .slider-content, .slider-nav{
+           margin-bottom: 1em;
+          }
+
+          .slider-title{
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 48px;
+          }
+
+          .slider-content{
+            font-size: 20px;
+            // line-height: 30px;
+            // text-align: justify;
+          }
+
+          .slider-nav{ 
+            @include flexAndWrap();
+
+            ul{
+              width: auto;
+              margin: auto;
+              max-width: 100%;
+              @include flexAndWrap();
+              list-style: none;
+    
+              li.slideNo{
+                width: 45px;
+                height: 45px;
+                font-size: 25px;
+                line-height: 30px;
+                letter-spacing: 2em;
+                
+                &.active{
+                  font-weight: 900;
+                }
+              }
+            }
+          }
+        }
+
+        @media screen and (min-width: 1024px) {
+          height: 658px;
+          padding: 0;
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-template-areas: "h1 img"
+                                "content img";
+
+          h1{
+            grid-area: h1;
+            padding: 10px;
+            text-align: left;
+            max-width: 400px;
+            margin-top: auto;
+            margin-bottom: 15px;
+          }
+
+          .slider-container{
+            grid-area: img;
+            margin: 0;
+
+            div.slider{
+              height: 100%;
+
+              div.slide-item {
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+
+          .slider-contents{
+            grid-area: content;
+            padding: 10px;
+            // margin: auto;
+            text-align: left;
+            max-width: 400px;
+            margin-top: 15px;
+            margin-bottom: auto;
+
+
+          }
+
+          h1, .slider-contents{
+            margin-left: 100px;
+
+            .slider-nav{   
+              ul{
+                width: 100%;
+                // margin: auto;
+              }
+            }
+          }
         }
       }
     }
@@ -654,7 +810,7 @@ body{
 
           input, textarea{
             background: #FFFFFF;
-            border: 1px solid #428348;
+            border: 1px solid $themeGreen;
             box-sizing: border-box;
             @include padElem(10px);
 

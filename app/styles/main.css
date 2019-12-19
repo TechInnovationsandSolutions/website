@@ -6,6 +6,31 @@
           box-sizing: border-box;
 }
 
+.fadeSlide {
+  -webkit-animation-name: fadeSlide;
+          animation-name: fadeSlide;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeSlide {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body, main, footer, section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,6 +600,164 @@ body main section.sub-major-services .sub-major-services__parent-container .sub-
 @media screen and (min-width: 768px) {
   body main section.sub-major-services {
     padding: 30px;
+  }
+}
+
+body main section.how-we-do-it {
+  color: #fff;
+  background-color: #428348;
+}
+
+body main section.how-we-do-it h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+
+body main section.how-we-do-it .slider-container, body main section.how-we-do-it .slider-contents {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+body main section.how-we-do-it .slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main section.how-we-do-it .slider-container div.slider {
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main section.how-we-do-it .slider-container div.slider div.slide-item {
+  width: 250px;
+  max-width: 100%;
+  height: 250px;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 729px;
+  max-height: 658px;
+  margin: auto;
+}
+
+body main section.how-we-do-it .slider-container div.slider div.slide-item img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body main section.how-we-do-it .slider-contents {
+  text-align: center;
+}
+
+body main section.how-we-do-it .slider-contents .slider-title, body main section.how-we-do-it .slider-contents .slider-content, body main section.how-we-do-it .slider-contents .slider-nav {
+  margin-bottom: 1em;
+}
+
+body main section.how-we-do-it .slider-contents .slider-title {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+body main section.how-we-do-it .slider-contents .slider-content {
+  font-size: 20px;
+}
+
+body main section.how-we-do-it .slider-contents .slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main section.how-we-do-it .slider-contents .slider-nav ul {
+  width: auto;
+  margin: auto;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+body main section.how-we-do-it .slider-contents .slider-nav ul li.slideNo {
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 2em;
+}
+
+body main section.how-we-do-it .slider-contents .slider-nav ul li.slideNo.active {
+  font-weight: 900;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section.how-we-do-it {
+    height: 658px;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "h1 img" "content img";
+  }
+  body main section.how-we-do-it h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: h1;
+    padding: 10px;
+    text-align: left;
+    max-width: 400px;
+    margin-top: auto;
+    margin-bottom: 15px;
+  }
+  body main section.how-we-do-it .slider-container {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: img;
+    margin: 0;
+  }
+  body main section.how-we-do-it .slider-container div.slider {
+    height: 100%;
+  }
+  body main section.how-we-do-it .slider-container div.slider div.slide-item {
+    height: 100%;
+    width: 100%;
+  }
+  body main section.how-we-do-it .slider-contents {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: content;
+    padding: 10px;
+    text-align: left;
+    max-width: 400px;
+    margin-top: 15px;
+    margin-bottom: auto;
+  }
+  body main section.how-we-do-it h1, body main section.how-we-do-it .slider-contents {
+    margin-left: 100px;
+  }
+  body main section.how-we-do-it h1 .slider-nav ul, body main section.how-we-do-it .slider-contents .slider-nav ul {
+    width: 100%;
   }
 }
 
