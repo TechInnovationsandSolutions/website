@@ -16,6 +16,11 @@ $navColor: #6A7C6C;
   flex-wrap: wrap;
 }  
 
+@mixin maxWidthWithFlex($val){
+  max-width: $val;
+  flex: 0 0 $val;
+}
+
 *{
   @include padElem();
   @include marginElem();
