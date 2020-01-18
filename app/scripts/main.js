@@ -69,6 +69,6 @@
     try {
        showSlides(); 
     } catch (err) {
-        console.err(error);
+        console.err(err);
     }
 })()
