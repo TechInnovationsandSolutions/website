@@ -850,7 +850,7 @@ body{
           text-align: center;
         }
 
-        label.form-label{
+        div.frm-field-container{
           @include padElem(5px);
 
           input, textarea{
