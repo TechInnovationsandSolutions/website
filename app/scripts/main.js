@@ -47,7 +47,7 @@
         var slideContent = document.querySelector('p.slider-content');
         // console.log(slides);
 
-        if (slides) {
+        if (slides && slideNo && slideTitle && sliderContents) {
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = 'none';  
             }
@@ -63,12 +63,12 @@
             slides[slideIndex-1].style.display = 'flex';  
             slideNo[slideIndex-1].className += ' active';
             setTimeout(showSlides, slideDuration); // Change image every 2 seconds
-            }
+        }
     }
 
     try {
        showSlides(); 
     } catch (err) {
-        console.err(error);
+        console.error(err);
     }
 })()

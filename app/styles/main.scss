@@ -16,6 +16,11 @@ $navColor: #6A7C6C;
   flex-wrap: wrap;
 }  
 
+@mixin maxWidthWithFlex($val){
+  max-width: $val;
+  flex: 0 0 $val;
+}
+
 *{
   @include padElem();
   @include marginElem();
@@ -39,7 +44,8 @@ body, main, footer, section{
 
 body, main, footer, section, header{
   width: 100%;
-  max-width: 100%;
+  // max-width: 100%;
+  @include maxWidthWithFlex(100%);
 }
 
 body{
@@ -72,6 +78,14 @@ body{
           }
         }
       }
+
+      a.navbar-brand{
+        img{
+          height: 150px;
+          width: 150px;
+        }
+      }
+
     }
   }
 
@@ -83,13 +97,15 @@ body{
 
       h1{
         width: 100%;
-        max-width: 100%;
+        // max-width: 100%;
+        @include maxWidthWithFlex(100%);
         text-align: center;
         @include flexAndWrap();
 
         &::after {
           content: "";
           width: 20%;
+          flex: 0 0 20%;
           height: 2px;
           background: $themeGreen;
           margin: 2px auto;
@@ -106,7 +122,8 @@ body{
 
         span{
           width: 100%;
-          max-width: 100%;
+          // max-width: 100%;
+          @include maxWidthWithFlex(100%);
           margin-bottom: 10px;
         }
       }
@@ -123,6 +140,11 @@ body{
             max-width: 469px;
             margin: 10px auto;
             color: rgba(0, 0, 0, 0.63);
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+              text-align: left;
+            }
           }
         }
 
@@ -134,6 +156,7 @@ body{
           img.ld-pg-img{
             width: 80%;
             max-width: 700px;
+            flex: 0 0 80%;
             max-height: 450px;
             margin: 5px auto;
           }
@@ -173,7 +196,8 @@ body{
 
         .who-we-are-title-cont, .who-we-are-contents-cont{
           width: 100%;
-          max-width: 100%;
+          // max-width: 100%;
+          @include maxWidthWithFlex(100%);
         }
 
         .who-we-are-contents-cont{ 
@@ -212,22 +236,24 @@ body{
         .what-we-do-contents-cont{
           @include flexAndWrap();
           width: 100%;
-          max-width: 100%;
+          @include maxWidthWithFlex(100%);
+          // max-width: 100%;
 
           .what-we-do-content-cont{
             @include flexAndWrap();
             width: 100%;
-            max-width: 100%;
+            @include maxWidthWithFlex(100%);
             margin-bottom: 25px;
 
             .what-we-do-img-cont{
               width: 100%;
-              max-width: 100%;
+              @include maxWidthWithFlex(100%);
               padding: 10px;
               @include flexAndWrap();
 
               img.what-we-do-img{
                 width: 80%;
+                flex: 0 0 80%;
                 max-width: 500px;
                 max-height: 500px;
                 margin: auto;
@@ -236,7 +262,7 @@ body{
 
             .what-we-do-content{
               width: 100%;
-              max-width: 100%;
+              @include maxWidthWithFlex(100%);
               @include flexAndWrap();
 
               span, p{
@@ -255,6 +281,7 @@ body{
 
                 svg{
                   width: 100px;
+                  flex: 0 0 100px;
                 }
               }
 
@@ -344,12 +371,13 @@ body{
 
         div.get-to-know__img{
           width: 100%;
-          max-width: 100%;
+          @include maxWidthWithFlex(100%);
           padding: 10px;
           @include flexAndWrap();
 
           img{
             width: 80%;
+            flex: 0 0 80%;
             max-width: 509px;
             max-height: 350px;
             margin: auto;
@@ -402,6 +430,7 @@ body{
       &.clients{
         div.client{
           width: 90%;
+          flex: 0 0 90%; //TTTTTT--===
           max-width: 450px;
           // max-height: 392px;
           margin: 25px auto;
@@ -412,7 +441,8 @@ body{
 
           *{
             width: 100%;
-            max-width: 100%;
+            // max-width: 100%;
+            @include maxWidthWithFlex(100%);
           }
 
           img{
@@ -444,7 +474,8 @@ body{
 
         div.major-services__contents-container, div.major-services__img-container{
           width: 100%;
-          max-width: 100%;
+          // max-width: 100%;
+          @include maxWidthWithFlex(100%);
           padding: 10px;
         }
 
@@ -479,6 +510,7 @@ body{
           img{
             margin: auto;
             width: 90%;
+            flex: 0 0 90%;
             max-width: 750px;
             max-height: 500px;
           }
@@ -528,11 +560,13 @@ body{
 
         .sub-major-services__parent-container{
           width: 100%;
-          max-width: 100%;
+          // max-width: 100%;
+          @include maxWidthWithFlex(100%);
           @include flexAndWrap();
 
           .sub-major-services__container{
             width: 95%;
+            flex: 0 0 95%;
             height: 300px;
             max-width: 400px;
             max-height: 400px;
@@ -573,7 +607,8 @@ body{
 
        .slider-container, .slider-contents{
           width: 100%;
-          max-width: 100%;
+          @include maxWidthWithFlex(100%);
+          // max-width: 100%;
           margin-bottom: 15px;
         }
 
@@ -582,12 +617,15 @@ body{
 
           div.slider{
             width: 100%;
-            max-width: 100%;
+            // max-width: 100%;
+            @include maxWidthWithFlex(100%);
             @include flexAndWrap();
 
             div.slide-item {
-              width: 250px;
-              max-width: 100%;
+              // width: 250px;
+              // // flex: 0 0 250px;
+              // max-width: 100%;
+              @include maxWidthWithFlex(100%);
               height: 250px;
               display: none;
               flex-wrap: wrap;
@@ -598,8 +636,9 @@ body{
               img{
                 width: 100%;
                 height: 100%;
-                max-width: 100%;
+                // max-width: 100%;
                 max-height: 100%;
+                @include maxWidthWithFlex(100%);
               }
             }
           }
@@ -631,6 +670,7 @@ body{
               width: auto;
               margin: auto;
               max-width: 100%;
+              // @include maxWidthWithFlex(100%);
               @include flexAndWrap();
               list-style: none;
     
@@ -713,19 +753,22 @@ body{
 
     div.contact-container, div.copyright-container{
       width: 100%;
-      max-width: 100%;
+      // max-width: 100%;
+      @include maxWidthWithFlex(100%);
       @include padElem($pY, $pX);
     }
 
     div.contact-container{
       div.contact-container__content-details-container, div.contact-container__form-container{
         width: 100%;
-        max-width: 100%;
+        // max-width: 100%;
+        @include maxWidthWithFlex(100%);
       }
 
       div.contact-container__content-details-container{
         width: 100%;
-        max-width: 100%;
+        @include maxWidthWithFlex(100%);
+        // max-width: 100%;
 
         div.contact-container__content-container{
           h4.contact-container__content-title{
@@ -750,7 +793,8 @@ body{
         div.contact-container__details-container{
           div.contact-container__info-container{
             width: 100%;
-            max-width: 100%;
+            // max-width: 100%;
+            @include maxWidthWithFlex(100%);
             @include flexAndWrap();
             @include marginElem(15px, 0px);
 
@@ -785,6 +829,7 @@ body{
 
       div.contact-container__form-container{
         width: 95%;
+        flex: 0 0 95%;
         max-width: 490px;
         max-height: 500px;
         background: #FFFFFF;
@@ -805,7 +850,7 @@ body{
           text-align: center;
         }
 
-        label.form-label{
+        div.frm-field-container{
           @include padElem(5px);
 
           input, textarea{
@@ -850,6 +895,7 @@ body{
       div.social-media-container{
         @include flexAndWrap();
         width: 50%;
+        flex: 0 0 50%;
         @include marginElem(10px, auto);
         text-align: center;
 
