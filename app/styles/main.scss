@@ -140,6 +140,11 @@ body{
             max-width: 469px;
             margin: 10px auto;
             color: rgba(0, 0, 0, 0.63);
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+              text-align: left;
+            }
           }
         }
 
